@@ -28,5 +28,31 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: "gatsby-source-tmdb",
+      options: {
+        apiKey: process.env.API_KEY,
+        sessionID: process.env.SESSION_ID,
+        region: "FR",
+        modules: {
+          account: {
+            activate: false,
+          },
+          misc: {
+            activate: true,
+
+            endpoints: [
+              ["miscTopRatedTvs", 1],
+              ["miscPopularTvs", 1],
+            ],
+          },
+          tv: {
+            activate: false,
+          },
+        },
+        timezone: "Europe/Paris",
+        reqPerTenSeconds: 30,
+      },
+    },
   ],
-}
+};
