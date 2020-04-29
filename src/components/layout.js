@@ -1,15 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ThemeProvider } from "styled-components";
-import { GlobalStyle, defaultTheme } from "../utils";
+import styled, { ThemeProvider } from "styled-components";
+import { GlobalStyle, defaultTheme, device } from "../utils";
+
+const Wrapper = styled.div`
+  max-width: 100vw;
+  margin: 0;
+  display: grid;
+  grid-gap: 10px;
+
+  @media screen and ${device.large} {
+    grid-template-columns: auto minmax(min-content, 940px) auto;
+    grid-auto-rows: minmax(100px, auto);
+  }
+`;
 
 const Layout = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={defaultTheme}>
-        <div>
-          <main>{children}</main>
-        </div>
+        <Wrapper>{children}</Wrapper>
         <GlobalStyle />
       </ThemeProvider>
     </>

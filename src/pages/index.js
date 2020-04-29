@@ -2,22 +2,31 @@ import React from "react";
 import { Link } from "gatsby";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import { SEO, Box } from "../components";
 import { usePopularShows } from "../hooks";
+import styled from "styled-components";
+
+const Header = styled(Box).attrs({ as: "header" })``;
+const Main = styled(Box).attrs({ as: "main" })``;
 
 const IndexPage = () => {
   const popularShows = usePopularShows();
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Home</h1>
-      <p>Welcome</p>
-      <ul>
-        {popularShows.map((show) => (
-          <li>{show.name}</li>
-        ))}
-      </ul>
-      <Link to="/tvshow-details/">Go to test page</Link>
+      <Header>
+        <h1>Header</h1>
+      </Header>
+      <Main>
+        <h1>Home</h1>
+        <p>Welcome</p>
+        <ul>
+          {popularShows.map((show) => (
+            <li>{show.name}</li>
+          ))}
+        </ul>
+        <Link to="/tvshow-details/">Go to test page</Link>
+      </Main>
     </Layout>
   );
 };

@@ -15,7 +15,8 @@
     "2gua.rainbow-brackets",
     "esbenp.prettier-vscode",
     "michelemelluso.code-beautifier",
-    "felipe.nasc-touchbar"
+    "felipe.nasc-touchbar",
+    "jpoissonnier.vscode-styled-components"
   ],
   "postCreateCommand": "npm install",
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
