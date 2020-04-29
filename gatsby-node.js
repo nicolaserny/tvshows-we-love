@@ -1,7 +1,31 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const result = await graphql(`
+    query {
+      popular: allTmdbMiscPopularTvs(
+        limit: 10
+        filter: { vote_average: { gt: 8 } }
+        sort: { fields: [popularity], order: DESC }
+      ) {
+        nodes {
+          id
+        }
+      }
+    }
+  `);
 
-// You can delete this file if you're not using it
+  if (result.errors) {
+    reporter.panic("failed to create tvshow details", result.errors);
+  }
+
+  const tvshows = result.data.popular.nodes;
+
+  tvshows.forEach((tvshow) => {
+    actions.createPage({
+      path: `/tvshow/${tvshow.id}`,
+      component: require.resolve("./src/templates/tvshow-details.js"),
+      context: {
+        id: tvshow.id,
+      },
+    });
+  });
+};

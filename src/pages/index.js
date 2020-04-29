@@ -22,10 +22,11 @@ const IndexPage = () => {
         <p>Welcome</p>
         <ul>
           {popularShows.map((show) => (
-            <li>{show.name}</li>
+            <li key={show.id}>
+              <Link to={`/tvshow/${show.id}`}>{show.name}</Link>
+            </li>
           ))}
         </ul>
-        <Link to="/tvshow-details/">Go to test page</Link>
       </Main>
     </Layout>
   );

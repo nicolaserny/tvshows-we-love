@@ -9,6 +9,9 @@ const Box = styled.div`
   @media screen and ${device.large} {
     grid-column: 2;
   }
+  & a {
+    color: #fff;
+  }
 `;
 
 export default Box;
