@@ -1,16 +1,36 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import { SEO, Box } from "../components";
 
-const TvshowDetailsTemplate = (props) => {
-  console.log(props);
+export const query = graphql`
+  query($id: String) {
+    popular: allTmdbMiscPopularTvs(filter: { id: { eq: $id } }) {
+      nodes {
+        name
+        overview
+        vote_average
+        id
+        backdrop_path {
+          childImageSharp {
+            fluid(maxWidth: 648, maxHeight: 364) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+const TvshowDetailsTemplate = ({ data: { popular } }) => {
+  const tvshow = popular.nodes[0];
   return (
     <Layout>
-      <SEO title="test" />
+      <SEO title={tvshow.name} />
       <Box>
-        <h1>Hi from the second page</h1>
+        <h1>{tvshow.name}</h1>
         <p>Welcome to page 2</p>
         <Link to="/">Go back to the homepage</Link>
       </Box>

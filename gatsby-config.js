@@ -50,6 +50,8 @@ module.exports = {
             activate: false,
           },
         },
+        backdrop: true,
+        poster: false,
         timezone: "Europe/Paris",
         reqPerTenSeconds: 30,
       },
