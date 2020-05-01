@@ -22,8 +22,8 @@ const IndexPage = () => {
         <p>Welcome</p>
         <ul>
           {popularShows.map((show) => (
-            <li key={show.id}>
-              <Link to={`/tvshow/${show.id}`}>{show.name}</Link>
+            <li key={show.tvshowId}>
+              <Link to={`/tvshow/${show.tvshowId}`}>{show.name}</Link>
             </li>
           ))}
         </ul>

@@ -41,10 +41,7 @@ module.exports = {
           misc: {
             activate: true,
 
-            endpoints: [
-              ["miscTopRatedTvs", 1],
-              ["miscPopularTvs", 1],
-            ],
+            endpoints: [["miscPopularTvs", 2]],
           },
           tv: {
             activate: false,

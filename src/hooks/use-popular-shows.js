@@ -5,15 +5,18 @@ export const usePopularShows = () => {
     query {
       popular: allTmdbMiscPopularTvs(
         limit: 10
-        filter: { vote_average: { gt: 8 } }
+        filter: { vote_average: { gt: 7.5 }, vote_count: { gt: 500 } }
         sort: { fields: [popularity], order: DESC }
       ) {
         nodes {
           name
-          id
+          tvshowId: miscPopularTvsId
         }
       }
     }
   `);
-  return data.popular.nodes.map((node) => ({ name: node.name, id: node.id }));
+  return data.popular.nodes.map((node) => ({
+    name: node.name,
+    tvshowId: node.tvshowId,
+  }));
 };

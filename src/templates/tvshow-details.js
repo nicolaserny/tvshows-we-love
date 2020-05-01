@@ -5,13 +5,15 @@ import Layout from "../components/layout";
 import { SEO, Box } from "../components";
 
 export const query = graphql`
-  query($id: String) {
-    popular: allTmdbMiscPopularTvs(filter: { id: { eq: $id } }) {
+  query($tvshowId: Int) {
+    popular: allTmdbMiscPopularTvs(
+      filter: { miscPopularTvsId: { eq: $tvshowId } }
+    ) {
       nodes {
         name
         overview
         vote_average
-        id
+        tvshowId: miscPopularTvsId
         backdrop_path {
           childImageSharp {
             fluid(maxWidth: 648, maxHeight: 364) {
