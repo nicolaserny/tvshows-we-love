@@ -1,8 +1,11 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import { SEO, Box } from "../components";
+import { SEO } from "../components";
+import BackHeader from "../components/backHeader";
+import TvshowHero from "../components/tvshowHero";
+import TvshowBlock from "../components/tvshowBlock";
 
 export const query = graphql`
   query($tvshowId: Int) {
@@ -31,11 +34,9 @@ const TvshowDetailsTemplate = ({ data: { popular } }) => {
   return (
     <Layout>
       <SEO title={tvshow.name} />
-      <Box>
-        <h1>{tvshow.name}</h1>
-        <p>Welcome to page 2</p>
-        <Link to="/">Go back to the homepage</Link>
-      </Box>
+      <BackHeader />
+      <TvshowHero photo={tvshow.backdrop_path.childImageSharp} />
+      <TvshowBlock title={tvshow.name} />
     </Layout>
   );
 };

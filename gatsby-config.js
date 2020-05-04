@@ -53,5 +53,11 @@ module.exports = {
         reqPerTenSeconds: 30,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Roboto`],
+      },
+    },
   ],
 };

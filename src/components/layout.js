@@ -7,11 +7,11 @@ const Wrapper = styled.div`
   max-width: 100vw;
   margin: 0;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 5px;
 
   @media screen and ${device.large} {
     grid-template-columns: auto minmax(min-content, 940px) auto;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(50px, auto);
   }
 `;
 
