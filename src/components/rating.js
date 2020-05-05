@@ -1,23 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import { margins } from "../utils";
+import { margins, typeScale } from "../utils";
 
-const StyledText = styled.h5`
-  color: ${(props) => props.theme.ratingColor};
+const StyledText = styled.span`
+  color: ${(props) => props.theme[`ratingColor${props.opinion}`]};
+  font-weight: bold;
+  font-size: ${typeScale.header5};
+  line-height: 21px;
+  margin: 0;
 `;
 
 const StyledBackground = styled.div`
   padding: ${margins.m1} ${margins.m3};
-  background: ${(props) => props.theme.ratingBackground};
+  background: ${(props) => props.theme[`ratingBackground${props.opinion}`]};
   display: inline-block;
   border-radius: 14px;
-  border: 2px solid ${(props) => props.theme.ratingBorder};
+  border: 2px solid ${(props) => props.theme[`ratingBorder${props.opinion}`]};
 `;
 
-const Rating = ({ value }) => (
-  <StyledBackground>
-    <StyledText>{Math.round(value * 10)}%</StyledText>
-  </StyledBackground>
-);
+const Rating = ({ value }) => {
+  const opinion = value >= 8 ? "Great" : "Good";
+  return (
+    <StyledBackground opinion={opinion}>
+      <StyledText opinion={opinion}>{Math.round(value * 10)}%</StyledText>
+    </StyledBackground>
+  );
+};
 
 export default Rating;

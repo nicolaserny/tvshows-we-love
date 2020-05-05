@@ -26,17 +26,32 @@ export const query = graphql`
         }
       }
     }
+    tvshowExtensions: allTvshowExtension(
+      filter: { trailerKey: { ne: null }, tvshowId: { eq: $tvshowId } }
+    ) {
+      nodes {
+        tvshowId
+        numberOfSeasons
+        cast
+        trailerKey
+      }
+    }
   }
 `;
 
-const TvshowDetailsTemplate = ({ data: { popular } }) => {
+const TvshowDetailsTemplate = ({ data: { popular, tvshowExtensions } }) => {
   const tvshow = popular.nodes[0];
+  const tvshowExt = tvshowExtensions.nodes[0];
   return (
     <Layout>
       <SEO title={tvshow.name} />
       <BackHeader />
       <TvshowHero photo={tvshow.backdrop_path.childImageSharp} />
-      <TvshowBlock title={tvshow.name} rating={tvshow.vote_average} />
+      <TvshowBlock
+        title={tvshow.name}
+        rating={tvshow.vote_average}
+        seasonCount={tvshowExt.numberOfSeasons}
+      />
     </Layout>
   );
 };

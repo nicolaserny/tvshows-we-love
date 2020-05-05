@@ -35,7 +35,9 @@ const StyledIcon = styled.svg`
 const StyledLabel = styled.span`
   color: ${(props) => props.theme.backTextColor};
   font-family: ${(props) => props.theme.primaryFont};
+  font-weight: 600;
   font-size: ${typeScale.header4};
+  line-height: 23px;
   margin-left: ${margins.m3};
 `;
 
