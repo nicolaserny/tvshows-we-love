@@ -36,7 +36,7 @@ const TvshowDetailsTemplate = ({ data: { popular } }) => {
       <SEO title={tvshow.name} />
       <BackHeader />
       <TvshowHero photo={tvshow.backdrop_path.childImageSharp} />
-      <TvshowBlock title={tvshow.name} />
+      <TvshowBlock title={tvshow.name} rating={tvshow.vote_average} />
     </Layout>
   );
 };

@@ -20,4 +20,8 @@ export const GlobalStyle = createGlobalStyle`
         font-size: ${typeScale.header2};
         margin: 0;
     }
+    h5 {
+        font-size: ${typeScale.header5};
+        margin: 0;
+    }
 `;

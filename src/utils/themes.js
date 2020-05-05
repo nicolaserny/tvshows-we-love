@@ -1,4 +1,4 @@
-import { neutral } from "./colors";
+import { neutral, green } from "./colors";
 import { primaryFont } from "./typography";
 
 export const defaultTheme = {
@@ -9,4 +9,7 @@ export const defaultTheme = {
   backIconColor: neutral[500],
   backIconColorHover: neutral[600],
   primaryFont,
+  ratingColor: green[900],
+  ratingBackground: green[100],
+  ratingBorder: green[300],
 };
