@@ -51,6 +51,8 @@ const TvshowDetailsTemplate = ({ data: { popular, tvshowExtensions } }) => {
         title={tvshow.name}
         rating={tvshow.vote_average}
         seasonCount={tvshowExt.numberOfSeasons}
+        overview={tvshow.overview}
+        castMembers={tvshowExt.cast}
       />
     </Layout>
   );
