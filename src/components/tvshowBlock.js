@@ -9,7 +9,7 @@ const StyledMain = styled(Box).attrs({ as: "main" })`
   margin: ${margins.m7} 0 0 0;
 `;
 
-const StyledTitle = styled.h2`
+const StyledTitle = styled.h1`
   font-weight: 500;
   line-height: 42px;
   letter-spacing: 0.4px;
