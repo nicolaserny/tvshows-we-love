@@ -6,7 +6,7 @@ import Rating from "./rating";
 import StarringBlock from "./starringBlock";
 
 const StyledMain = styled(Box).attrs({ as: "main" })`
-  margin: ${margins.m7} 0 0 0;
+  margin: ${margins.m6} 0 0 0;
 `;
 
 const StyledTitle = styled.h1`
@@ -25,6 +25,14 @@ const StyledSeasons = styled.span`
 
 const StyledDescriptionSection = styled.section`
   display: flex;
+`;
+
+const StyledSeparator = styled.div`
+  background: ${(props) => props.theme.overviewSeparatorColor};
+  border: none;
+  width: 100%;
+  height: 2px;
+  margin: ${margins.m3} 0;
 `;
 
 const StyledOverview = styled.p`
@@ -46,6 +54,7 @@ const TvshowBlock = ({ title, rating, seasonCount, overview, castMembers }) => (
       <Rating value={rating} />
       <StyledSeasons>{seasonCount} seasons</StyledSeasons>
     </div>
+    <StyledSeparator />
     <StyledDescriptionSection>
       <StyledOverview>{overview}</StyledOverview>
       <StarringBlock castMembers={castMembers}></StarringBlock>

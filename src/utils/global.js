@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "polished";
 import { typeScale } from "./typography";
+import { neutral } from "./colors";
 
 export const GlobalStyle = createGlobalStyle`
     ${normalize()}
@@ -9,6 +10,8 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: ${(props) => props.theme.primaryFont};
         color: ${(props) => props.theme.primaryColor};
+          background: ${neutral[100]};
+
     }
     *, *:before, *:after {
         box-sizing: inherit;

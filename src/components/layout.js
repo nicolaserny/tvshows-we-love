@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
   @media screen and ${device.large} {
     grid-template-columns: auto minmax(min-content, 940px) auto;
-    grid-auto-rows: minmax(50px, auto);
+    grid-auto-rows: minmax(0px, auto);
   }
 `;
 

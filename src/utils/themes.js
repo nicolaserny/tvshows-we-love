@@ -19,4 +19,5 @@ export const defaultTheme = {
   numberOfSeasonsColor: neutral[500],
   overviewColor: neutral[700],
   starringColor: neutral[600],
+  overviewSeparatorColor: neutral[200],
 };
