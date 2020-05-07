@@ -20,4 +20,5 @@ export const defaultTheme = {
   overviewColor: neutral[700],
   starringColor: neutral[600],
   overviewSeparatorColor: neutral[200],
+  trailerTitleColor: neutral[900],
 };

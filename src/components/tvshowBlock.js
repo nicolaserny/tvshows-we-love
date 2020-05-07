@@ -4,13 +4,14 @@ import Box from "./box";
 import { margins, typeScale } from "../utils";
 import Rating from "./rating";
 import StarringBlock from "./starringBlock";
+import TrailerBlock from "./trailerBlock";
 
 const StyledMain = styled(Box).attrs({ as: "main" })`
   margin: ${margins.m6} 0 0 0;
 `;
 
-const StyledTitle = styled.h1`
-  font-weight: 500;
+const StyledTitle = styled.h2`
+  font-weight: 600;
   line-height: 42px;
   letter-spacing: 0.4px;
 `;
@@ -47,7 +48,14 @@ const StyledOverview = styled.p`
   width: 60%;
 `;
 
-const TvshowBlock = ({ title, rating, seasonCount, overview, castMembers }) => (
+const TvshowBlock = ({
+  title,
+  rating,
+  seasonCount,
+  overview,
+  castMembers,
+  trailerKey,
+}) => (
   <StyledMain>
     <StyledTitle>{title}</StyledTitle>
     <div>
@@ -59,6 +67,7 @@ const TvshowBlock = ({ title, rating, seasonCount, overview, castMembers }) => (
       <StyledOverview>{overview}</StyledOverview>
       <StarringBlock castMembers={castMembers}></StarringBlock>
     </StyledDescriptionSection>
+    <TrailerBlock trailerKey={trailerKey} />
   </StyledMain>
 );
 

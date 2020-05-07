@@ -19,8 +19,16 @@ export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
     }
+    h1 {
+        font-size: ${typeScale.header1};
+        margin: 0;
+    }
     h2 {
         font-size: ${typeScale.header2};
+        margin: 0;
+    }
+    h3 {
+        font-size: ${typeScale.header3};
         margin: 0;
     }
 `;

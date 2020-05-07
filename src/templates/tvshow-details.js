@@ -53,6 +53,7 @@ const TvshowDetailsTemplate = ({ data: { popular, tvshowExtensions } }) => {
         seasonCount={tvshowExt.numberOfSeasons}
         overview={tvshow.overview}
         castMembers={tvshowExt.cast}
+        trailerKey={tvshowExt.trailerKey}
       />
     </Layout>
   );
