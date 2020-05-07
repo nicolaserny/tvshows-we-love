@@ -50,7 +50,6 @@ exports.createPages = async ({
   const tvshows = result.data.popular.nodes;
 
   for (let tvshow of tvshows) {
-    reporter.info(tvshow.miscPopularTvsId);
     const commonData = await getDataFromMovieDbAsync(tvshow.miscPopularTvsId);
     const credits = await getDataFromMovieDbAsync(
       tvshow.miscPopularTvsId,
