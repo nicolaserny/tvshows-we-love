@@ -16,6 +16,7 @@ const StyledTitle = styled.h3`
 const StyledTrailer = styled.iframe`
   margin-top: ${margins.m3};
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 `;
 
 const TrailerBlock = ({ trailerKey }) => (

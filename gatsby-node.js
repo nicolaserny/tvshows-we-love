@@ -50,6 +50,7 @@ exports.createPages = async ({
   const tvshows = result.data.popular.nodes;
 
   for (let tvshow of tvshows) {
+    reporter.info(tvshow.miscPopularTvsId);
     const commonData = await getDataFromMovieDbAsync(tvshow.miscPopularTvsId);
     const credits = await getDataFromMovieDbAsync(
       tvshow.miscPopularTvsId,
@@ -59,7 +60,10 @@ exports.createPages = async ({
       tvshow.miscPopularTvsId,
       "/videos",
     );
-    const trailer = videos.results.find((video) => video.type === "Trailer");
+    let trailer = videos.results.find((video) => video.type === "Trailer");
+    if (!trailer) {
+      trailer = videos.results.find((video) => video.type === "Teaser");
+    }
     actions.createNode({
       id: createNodeId(`extension-${tvshow.miscPopularTvsId}`),
       parent: null,

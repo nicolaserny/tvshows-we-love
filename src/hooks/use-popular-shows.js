@@ -13,10 +13,24 @@ export const usePopularShows = () => {
           tvshowId: miscPopularTvsId
         }
       }
+      tvshowExtensions: allTvshowExtension(
+        filter: { trailerKey: { ne: null } }
+      ) {
+        nodes {
+          tvshowId
+        }
+      }
     }
   `);
-  return data.popular.nodes.map((node) => ({
-    name: node.name,
-    tvshowId: node.tvshowId,
-  }));
+  return data.popular.nodes
+    .filter(
+      (node) =>
+        data.tvshowExtensions.nodes.findIndex(
+          (e) => e.tvshowId === node.tvshowId,
+        ) !== -1,
+    )
+    .map((node) => ({
+      name: node.name,
+      tvshowId: node.tvshowId,
+    }));
 };
