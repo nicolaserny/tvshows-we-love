@@ -4,9 +4,8 @@ import { margins, typeScale } from "../utils";
 
 const StyledText = styled.span`
   color: ${(props) => props.theme[`ratingColor${props.opinion}`]};
-  font-weight: bold;
+  font-weight: 900;
   font-size: ${typeScale.paragraph};
-  line-height: 21px;
   margin: 0;
 `;
 

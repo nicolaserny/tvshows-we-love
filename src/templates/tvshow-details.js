@@ -1,6 +1,8 @@
 import React from "react";
+import styled from "styled-components";
 import { graphql } from "gatsby";
 
+import { device } from "../utils";
 import Layout from "../components/layout";
 import { SEO } from "../components";
 import BackHeader from "../components/backHeader";
@@ -39,22 +41,36 @@ export const query = graphql`
   }
 `;
 
+const Wrapper = styled.div`
+  max-width: 100vw;
+  margin: 0;
+  display: grid;
+  grid-gap: 5px;
+
+  @media screen and ${device.large} {
+    grid-template-columns: auto minmax(min-content, 940px) auto;
+    grid-auto-rows: minmax(0px, auto);
+  }
+`;
+
 const TvshowDetailsTemplate = ({ data: { popular, tvshowExtensions } }) => {
   const tvshow = popular.nodes[0];
   const tvshowExt = tvshowExtensions.nodes[0];
   return (
     <Layout>
-      <SEO title={tvshow.name} />
-      <BackHeader />
-      <TvshowHero photo={tvshow.backdrop_path.childImageSharp} />
-      <TvshowBlock
-        title={tvshow.name}
-        rating={tvshow.vote_average}
-        seasonCount={tvshowExt.numberOfSeasons}
-        overview={tvshow.overview}
-        castMembers={tvshowExt.cast}
-        trailerKey={tvshowExt.trailerKey}
-      />
+      <Wrapper>
+        <SEO title={tvshow.name} />
+        <BackHeader />
+        <TvshowHero photo={tvshow.backdrop_path.childImageSharp} />
+        <TvshowBlock
+          title={tvshow.name}
+          rating={tvshow.vote_average}
+          seasonCount={tvshowExt.numberOfSeasons}
+          overview={tvshow.overview}
+          castMembers={tvshowExt.cast}
+          trailerKey={tvshowExt.trailerKey}
+        />
+      </Wrapper>
     </Layout>
   );
 };

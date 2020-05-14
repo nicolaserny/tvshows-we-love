@@ -13,7 +13,7 @@ const StyledMain = styled(Box).attrs({ as: "main" })`
 const StyledTitle = styled.h2`
   font-weight: 600;
   line-height: 42px;
-  letter-spacing: 0.4px;
+  margin-bottom: ${margins.m3};
 `;
 
 const StyledSeasons = styled.span`

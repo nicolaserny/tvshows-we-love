@@ -48,7 +48,7 @@ module.exports = {
           },
         },
         backdrop: true,
-        poster: false,
+        poster: true,
         timezone: "Europe/Paris",
         reqPerTenSeconds: 30,
       },
@@ -56,7 +56,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Roboto`],
+        fonts: [`Montserrat`, `Lora`],
       },
     },
   ],

@@ -11,6 +11,13 @@ export const usePopularShows = () => {
         nodes {
           name
           tvshowId: miscPopularTvsId
+          poster_path {
+            childImageSharp {
+              fluid(maxWidth: 500, maxHeight: 750) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
       tvshowExtensions: allTvshowExtension(
@@ -32,5 +39,6 @@ export const usePopularShows = () => {
     .map((node) => ({
       name: node.name,
       tvshowId: node.tvshowId,
+      poster: node.poster_path.childImageSharp,
     }));
 };

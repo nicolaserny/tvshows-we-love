@@ -21,6 +21,7 @@ const StyledLink = styled(Link)`
     }
     span {
       color: ${(props) => props.theme.backTextColorHover};
+      font-weight: 700;
     }
   }
 `;
@@ -38,7 +39,7 @@ const StyledLabel = styled.span`
   font-weight: 600;
   font-size: ${typeScale.header4};
   line-height: 23px;
-  margin-left: ${margins.m3};
+  margin-left: ${margins.m2};
 `;
 
 const StyledHeader = styled(Box).attrs({ as: "header" })``;
