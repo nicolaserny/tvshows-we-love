@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { margins } from "../utils";
 
 const StyledSvg = styled.svg`
   grid-column: span 4;
   grid-row: span 3;
   width: 100%;
+  padding-bottom: ${margins.m3};
 `;
 
 const Illustration = () => (

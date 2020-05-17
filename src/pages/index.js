@@ -9,18 +9,20 @@ import { Illustration, Thumbnail } from "../components";
 const Header = styled.header`
   grid-column: 1/-1;
   align-self: center;
-  margin: ${margins.m7} 0;
+  margin: 0 0 ${margins.m3} 0;
 `;
 
 const Wrapper = styled.main`
   display: grid;
   width: 80vw;
-  height: calc(100vh-20px);
-  margin: 0 auto ${margins.m7} auto;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-template-rows: auto repeat(auto-fit, minmax(150px, auto));
+  max-width: 1500px;
+  height: calc(100vh - 2 * ${margins.m7});
+  margin: ${margins.m7} auto;
+  grid-template-columns: repeat(7, minmax(min-content, 100px));
+  grid-template-rows: auto repeat(5, minmax(auto, 1fr));
   grid-auto-flow: dense;
-  column-gap: calc(100vw / 20);
+  justify-content: space-around;
+  align-content: space-around;
   row-gap: 10px;
 `;
 

@@ -7,8 +7,10 @@ const StyledLink = styled(Link)`
   transition: 200ms box-shadow linear;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
-  width: 100px;
-  max-width: 100%;
+  max-width: 100px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
   &:focus,
   &:hover {
     box-shadow: 0 2px 14px #222244;
