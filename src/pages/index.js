@@ -9,16 +9,16 @@ import { Illustration, Thumbnail } from "../components";
 const Header = styled.header`
   grid-column: 1/-1;
   align-self: center;
+  margin: ${margins.m7} 0;
 `;
 
 const Wrapper = styled.main`
   display: grid;
-  margin: ${margins.m7};
   width: 80vw;
   height: calc(100vh-20px);
-  margin: 10px auto;
+  margin: 0 auto ${margins.m7} auto;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-auto-rows: minmax(150px, auto);
+  grid-template-rows: auto repeat(auto-fit, minmax(150px, auto));
   grid-auto-flow: dense;
   column-gap: calc(100vw / 20);
   row-gap: 10px;
