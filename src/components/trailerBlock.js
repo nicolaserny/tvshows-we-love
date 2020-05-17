@@ -14,23 +14,35 @@ const StyledTitle = styled.h3`
 `;
 
 const StyledTrailer = styled.iframe`
-  margin-top: ${margins.m3};
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
+const StyledTrailerContainer = styled.div`
+  margin-top: ${margins.m3};
+  height: 0;
+  padding-top: 56.25%;
+  width: 100%;
+  position: relative;
 `;
 
 const TrailerBlock = ({ trailerKey }) => (
   <StyledSection>
     <StyledTitle>Trailer</StyledTitle>
-    <StyledTrailer
-      width="100%"
-      title="Trailer"
-      height="400"
-      src={`https://www.youtube-nocookie.com/embed/${trailerKey}`}
-      frameBorder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></StyledTrailer>
+    <StyledTrailerContainer>
+      <StyledTrailer
+        title="Trailer"
+        src={`https://www.youtube-nocookie.com/embed/${trailerKey}`}
+        frameBorder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></StyledTrailer>
+    </StyledTrailerContainer>
   </StyledSection>
 );
 
