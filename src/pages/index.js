@@ -16,10 +16,12 @@ const Wrapper = styled.main`
   display: grid;
   width: 80vw;
   max-width: 1500px;
-  height: calc(100vh - 2 * ${margins.m7});
+  @media screen and (min-height: 950px) {
+    height: calc(100vh - 2 * ${margins.m7});
+  }
   margin: ${margins.m7} auto;
   grid-template-columns: repeat(7, minmax(min-content, 100px));
-  grid-template-rows: auto repeat(5, minmax(auto, 1fr));
+  grid-template-rows: auto repeat(5, minmax(min-content, 150px));
   grid-auto-flow: dense;
   justify-content: space-around;
   align-content: space-around;
