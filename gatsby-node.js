@@ -32,7 +32,7 @@ exports.createPages = async ({
     query {
       popular: allTmdbMiscPopularTvs(
         limit: 10
-        filter: { vote_average: { gt: 7.5 }, vote_count: { gt: 500 } }
+        filter: { vote_count: { gt: 500 } }
         sort: { fields: [popularity], order: DESC }
       ) {
         nodes {
