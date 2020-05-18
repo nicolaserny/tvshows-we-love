@@ -13,6 +13,7 @@ export const neutral = {
 
 export const purple = {
   700: "#90279C",
+  800: "#7C1A87",
 };
 
 export const green = {

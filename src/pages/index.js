@@ -1,10 +1,9 @@
 import React from "react";
 import Layout from "../components/layout";
-import { SEO } from "../components";
+import { SEO, DiscoverTitle, Illustration, Thumbnail } from "../components";
 import { usePopularShows } from "../hooks";
 import styled from "styled-components";
 import { margins } from "../utils";
-import { Illustration, Thumbnail } from "../components";
 
 const Header = styled.header`
   grid-column: 1/-1;
@@ -34,11 +33,6 @@ const WebsiteTitle = styled.h3`
   font-weight: 700;
 `;
 
-const DiscoverBlock = styled.div`
-  grid-column: 5 / span 3;
-  grid-row: 4;
-`;
-
 const posterIndexed = [1, 5, 6, 8, 10, 11, 12, 14, 16, 17];
 
 const IndexPage = () => {
@@ -59,10 +53,7 @@ const IndexPage = () => {
           <WebsiteTitle>TV Shows we &hearts;</WebsiteTitle>
         </Header>
         <Illustration />
-        <DiscoverBlock>
-          <h2>Discover</h2>
-          <h2>Popular TV Shows</h2>
-        </DiscoverBlock>
+        <DiscoverTitle />
         {posters}
       </Wrapper>
     </Layout>

@@ -1,4 +1,5 @@
 export const primaryFont = "'Montserrat', sans-serif";
+export const secondaryFont = "'Lora', serif";
 
 export const typeScale = {
   header1: "3rem",

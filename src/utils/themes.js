@@ -1,5 +1,5 @@
 import { neutral, green, yellow, purple } from "./colors";
-import { primaryFont } from "./typography";
+import { primaryFont, secondaryFont } from "./typography";
 
 export const defaultTheme = {
   primaryColor: neutral[900],
@@ -10,6 +10,7 @@ export const defaultTheme = {
   backIconColor: neutral[500],
   backIconColorHover: neutral[600],
   primaryFont,
+  secondaryFont,
   ratingColorGreat: green[900],
   ratingBackgroundGreat: green[100],
   ratingBorderGreat: green[300],
@@ -21,4 +22,6 @@ export const defaultTheme = {
   starringColor: neutral[600],
   overviewSeparatorColor: neutral[200],
   trailerTitleColor: neutral[900],
+  discoverTitleDefaultColor: neutral[1000],
+  discoverTitleAccentColor: purple[800],
 };
