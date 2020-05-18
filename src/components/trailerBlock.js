@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { margins } from "../utils";
 
 const StyledSection = styled.section`
-  margin: ${margins.m6} 0 ${margins.m5} 0;
+  margin: ${margins.m6} 0 ${margins.m7} 0;
 `;
 
 const StyledTitle = styled.h3`
