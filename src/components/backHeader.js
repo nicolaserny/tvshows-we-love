@@ -58,7 +58,7 @@ const BackHeader = () => (
         >
           <path d="M1.178 12.6a1.633 1.633 0 010-2.31L10.512.956a1.633 1.633 0 012.31 2.31l-8.179 8.178 8.179 8.179a1.633 1.633 0 01-2.31 2.31l-9.334-9.334z" />
         </StyledIcon>
-        <StyledLabel>Back</StyledLabel>
+        <StyledLabel>All popular shows</StyledLabel>
       </StyledLink>
     </nav>
   </StyledHeader>
