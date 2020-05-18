@@ -29,7 +29,7 @@ export const query = graphql`
       }
     }
     tvshowExtensions: allTvshowExtension(
-      filter: { trailerKey: { ne: null }, tvshowId: { eq: $tvshowId } }
+      filter: { tvshowId: { eq: $tvshowId } }
     ) {
       nodes {
         tvshowId

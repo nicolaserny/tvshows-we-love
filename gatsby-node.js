@@ -10,13 +10,13 @@ const getDataFromMovieDbAsync = async (tvshowId, slug) => {
   return data;
 };
 
-exports.sourceNodes = ({ actions }) => {
+exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
     type TvshowExtension implements Node {
-      tvshowId: Int
+      tvshowId: Int!
       numberOfSeasons: Int
       cast: [String]
-      trailerKey: String!
+      trailerKey: String
     }
   `);
 };

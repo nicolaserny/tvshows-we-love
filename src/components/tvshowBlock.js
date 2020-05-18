@@ -67,7 +67,7 @@ const TvshowBlock = ({
       <StyledOverview>{overview}</StyledOverview>
       <StarringBlock castMembers={castMembers}></StarringBlock>
     </StyledDescriptionSection>
-    <TrailerBlock trailerKey={trailerKey} />
+    {trailerKey && <TrailerBlock trailerKey={trailerKey} />}
   </StyledMain>
 );
 

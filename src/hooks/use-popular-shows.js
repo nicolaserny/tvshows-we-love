@@ -20,9 +20,7 @@ export const usePopularShows = () => {
           }
         }
       }
-      tvshowExtensions: allTvshowExtension(
-        filter: { trailerKey: { ne: null } }
-      ) {
+      tvshowExtensions: allTvshowExtension {
         nodes {
           tvshowId
         }
