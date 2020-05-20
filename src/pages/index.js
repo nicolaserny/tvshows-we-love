@@ -20,7 +20,7 @@ const Wrapper = styled.main`
   }
   margin: ${margins.m7} auto;
   grid-template-columns: repeat(7, minmax(min-content, 100px));
-  grid-template-rows: auto repeat(5, minmax(min-content, 150px));
+  grid-template-rows: auto repeat(5, auto);
   grid-auto-flow: dense;
   justify-content: space-around;
   align-content: space-around;

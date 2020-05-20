@@ -5,7 +5,10 @@ export const usePopularShows = () => {
     query {
       popular: allTmdbMiscPopularTvs(
         limit: 10
-        filter: { vote_count: { gt: 500 } }
+        filter: {
+          vote_count: { gt: 500 }
+          first_air_date: { gt: "2006-01-01" }
+        }
         sort: { fields: [popularity], order: DESC }
       ) {
         nodes {

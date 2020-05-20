@@ -4,11 +4,9 @@ import Image from "gatsby-image";
 import styled from "styled-components";
 
 const StyledLink = styled(Link)`
-  transition: 200ms box-shadow linear;
+  transition: 200ms box-shadow ease-in;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
-  max-width: 100px;
-  max-height: 150px;
   width: auto;
   height: auto;
   &:focus,
