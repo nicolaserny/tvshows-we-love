@@ -1,12 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import { margins } from "../utils";
+import { margins, device } from "../utils";
 
 const StyledSvg = styled.svg`
-  grid-column: span 4;
-  grid-row: span 3;
+  grid-column: span 3;
+  grid-row: 2;
+  align-self: center;
   width: 100%;
   padding-bottom: ${margins.m3};
+  @media screen and (min-width: ${device.medium}) {
+    grid-column: span 4;
+    grid-row: span 3;
+  }
 `;
 
 const Illustration = () => (

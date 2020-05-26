@@ -1,9 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { device, margins } from "../utils";
 
 const DiscoverBlock = styled.div`
-  grid-column: 5 / span 3;
-  grid-row: 4;
+  grid-column: span 3;
+  grid-row: 3;
+  align-self: center;
+  margin-bottom: ${margins.m2};
+  @media screen and (min-width: ${device.medium}) {
+    margin-bottom: 0;
+    grid-column: 5 / span 3;
+    grid-row: 4;
+  }
 `;
 
 const StyledDiscoverH1 = styled.h1`

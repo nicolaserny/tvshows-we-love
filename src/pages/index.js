@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import { SEO, DiscoverTitle, Illustration, Thumbnail } from "../components";
 import { usePopularShows } from "../hooks";
 import styled from "styled-components";
-import { margins } from "../utils";
+import { margins, device } from "../utils";
 
 const Header = styled.header`
   grid-column: 1/-1;
@@ -19,18 +19,29 @@ const Wrapper = styled.main`
     height: calc(100vh - 2 * ${margins.m7});
   }
   margin: ${margins.m7} auto;
-  grid-template-columns: repeat(7, minmax(min-content, 100px));
+  grid-template-columns: repeat(3, minmax(min-content, 80px));
   grid-template-rows: auto repeat(5, auto);
   grid-auto-flow: dense;
   justify-content: space-around;
   align-content: space-around;
   row-gap: 10px;
+  @media screen and (min-width: ${device.medium}) {
+    grid-template-columns: repeat(7, minmax(min-content, 100px));
+    grid-template-rows: auto repeat(5, auto);
+  }
 `;
 
 const WebsiteTitle = styled.h3`
   color: ${(props) => props.theme.primaryColor};
   font-style: normal;
   font-weight: 700;
+`;
+
+const EmptyDiv = styled.div`
+  display: none;
+  @media screen and (min-width: ${device.medium}) {
+    display: block;
+  }
 `;
 
 const posterIndexed = [1, 5, 6, 8, 10, 11, 12, 14, 16, 17];
@@ -42,7 +53,7 @@ const IndexPage = () => {
     posterIndexed.includes(i) && shows.length > 0 ? (
       <Thumbnail key={`poster-${el}`} show={shows.shift()} />
     ) : (
-      <div key={`poster-${el}`} />
+      <EmptyDiv key={`poster-${el}`} />
     ),
   );
   return (

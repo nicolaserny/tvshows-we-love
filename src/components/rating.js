@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { margins, typeScale } from "../utils";
+import { margins } from "../utils";
 
 const StyledText = styled.span`
   color: ${(props) => props.theme[`ratingColor${props.opinion}`]};
   font-weight: 900;
-  font-size: ${typeScale.paragraph};
   margin: 0;
 `;
 

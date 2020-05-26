@@ -6,8 +6,7 @@ import Image from "gatsby-image";
 const StyledHeroSection = styled(Box).attrs({ as: "section" })``;
 
 const StyledHeroImage = styled(Image)`
-  width: 648px;
-  max-width: 100%;
+  width: 100%;
   margin: auto;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   border-radius: 14px;

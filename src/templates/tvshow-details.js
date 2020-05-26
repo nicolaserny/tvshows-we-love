@@ -42,12 +42,14 @@ export const query = graphql`
 `;
 
 const Wrapper = styled.div`
-  max-width: 100vw;
-  margin: 0;
+  max-width: 80vw;
+  margin: 0 auto;
   display: grid;
   grid-gap: 5px;
 
-  @media screen and ${device.large} {
+  @media screen and (min-width: ${device.medium}) {
+    margin: 0;
+    max-width: 100vw;
     grid-template-columns: auto minmax(min-content, 940px) auto;
     grid-auto-rows: minmax(0px, auto);
   }

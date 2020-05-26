@@ -1,7 +1,3 @@
-const size = {
-  large: "600px",
-};
-
 export const device = {
-  large: `(min-width: ${size.large})`,
+  medium: "600px",
 };

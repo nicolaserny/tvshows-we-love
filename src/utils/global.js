@@ -1,7 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "polished";
-import { typeScale } from "./typography";
+import { typeScale, typeScaleSmall } from "./typography";
 import { neutral } from "./colors";
+import { device } from "./device";
 
 export const GlobalStyle = createGlobalStyle`
     ${normalize()}
@@ -19,16 +20,33 @@ export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
     }
+    p span {
+        font-size: ${typeScaleSmall.paragraph};
+        @media screen and (min-width: ${device.medium}) {
+            font-size: ${typeScale.paragraph};
+        }
+
+    }
     h1 {
-        font-size: ${typeScale.header1};
         margin: 0;
+        font-size: ${typeScaleSmall.header1};
+        @media screen and (min-width: ${device.medium}) {
+            font-size: ${typeScale.header1};
+        }
+
     }
     h2 {
-        font-size: ${typeScale.header2};
         margin: 0;
+        font-size: ${typeScaleSmall.header2};
+        @media screen and (min-width: ${device.medium}) {
+            font-size: ${typeScale.header2};
+        }
     }
     h3 {
-        font-size: ${typeScale.header3};
         margin: 0;
+        font-size: ${typeScaleSmall.header3};
+        @media screen and (min-width: ${device.medium}) {
+            font-size: ${typeScale.header3};
+        }
     }
 `;

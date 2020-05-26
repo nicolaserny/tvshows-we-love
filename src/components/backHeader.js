@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { typeScale, margins } from "../utils";
+import { typeScale, margins, device, typeScaleSmall } from "../utils";
 import Box from "./box";
 import { Link } from "gatsby";
 
@@ -8,7 +8,7 @@ const StyledLink = styled(Link)`
   display: flex;
   border: none;
   background: none;
-  margin: ${margins.m7} 0;
+  margin: ${margins.m7} 0 ${margins.m5} 0;
   text-decoration: none;
   outline: none;
   cursor: pointer;
@@ -24,6 +24,9 @@ const StyledLink = styled(Link)`
       font-weight: 700;
     }
   }
+  @media screen and (min-width: ${device.medium}) {
+    margin: ${margins.m7} 0;
+  }
 `;
 
 const StyledIcon = styled.svg`
@@ -37,9 +40,13 @@ const StyledLabel = styled.span`
   color: ${(props) => props.theme.backTextColor};
   font-family: ${(props) => props.theme.primaryFont};
   font-weight: 600;
-  font-size: ${typeScale.header4};
+  font-size: ${typeScaleSmall.paragraph};
+  letter-spacing: -0.1px;
   line-height: 23px;
   margin-left: ${margins.m2};
+  @media screen and (min-width: ${device.medium}) {
+    font-size: ${typeScale.header4};
+  }
 `;
 
 const StyledHeader = styled(Box).attrs({ as: "header" })``;
