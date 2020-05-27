@@ -1,6 +1,12 @@
 import React from "react";
 import Layout from "../components/layout";
-import { SEO, DiscoverTitle, Illustration, Thumbnail } from "../components";
+import {
+  SEO,
+  DiscoverTitle,
+  Illustration,
+  Thumbnail,
+  AppTitle,
+} from "../components";
 import { usePopularShows } from "../hooks";
 import styled from "styled-components";
 import { margins, device } from "../utils";
@@ -39,12 +45,6 @@ const Wrapper = styled.main`
   }
 `;
 
-const WebsiteTitle = styled.h3`
-  color: ${(props) => props.theme.primaryColor};
-  font-style: normal;
-  font-weight: 700;
-`;
-
 const EmptyDiv = styled.div`
   display: none;
   @media screen and (min-width: ${device.medium}) {
@@ -69,7 +69,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Wrapper>
         <Header>
-          <WebsiteTitle>TV Shows we &hearts;</WebsiteTitle>
+          <AppTitle />
         </Header>
         <Illustration />
         <DiscoverTitle />

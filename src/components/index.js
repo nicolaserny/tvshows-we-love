@@ -4,3 +4,4 @@ export { default as SEO } from "./seo";
 export { default as Illustration } from "./illustration";
 export { default as Thumbnail } from "./thumbnail";
 export { default as DiscoverTitle } from "./discoverTitle";
+export { default as AppTitle } from "./appTitle";
