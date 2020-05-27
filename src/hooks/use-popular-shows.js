@@ -4,10 +4,11 @@ export const usePopularShows = () => {
   const data = useStaticQuery(graphql`
     query {
       popular: allTmdbMiscPopularTvs(
-        limit: 10
+        limit: 12
         filter: {
           vote_count: { gt: 500 }
           first_air_date: { gt: "2006-01-01" }
+          poster_path: { id: { ne: null } }
         }
         sort: { fields: [popularity], order: DESC }
       ) {

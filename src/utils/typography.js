@@ -20,3 +20,13 @@ export const typeScaleSmall = {
   helperText: "0.8rem",
   copyrightText: "0.7rem",
 };
+
+export const typeScaleMedium = {
+  header1: "2.25rem",
+  header2: "1.875rem",
+  header3: "1.5rem",
+  header4: "1.125rem",
+  paragraph: "1rem",
+  helperText: "0.8rem",
+  copyrightText: "0.7rem",
+};

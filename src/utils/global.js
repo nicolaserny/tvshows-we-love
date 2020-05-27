@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "polished";
-import { typeScale, typeScaleSmall } from "./typography";
+import { typeScale, typeScaleSmall, typeScaleMedium } from "./typography";
 import { neutral } from "./colors";
 import { device } from "./device";
 
@@ -23,14 +23,19 @@ export const GlobalStyle = createGlobalStyle`
     p span {
         font-size: ${typeScaleSmall.paragraph};
         @media screen and (min-width: ${device.medium}) {
+            font-size: ${typeScaleMedium.paragraph};
+        }
+        @media screen and (min-width: ${device.large}) {
             font-size: ${typeScale.paragraph};
         }
-
     }
     h1 {
         margin: 0;
         font-size: ${typeScaleSmall.header1};
         @media screen and (min-width: ${device.medium}) {
+            font-size: ${typeScaleMedium.header1};
+        }
+        @media screen and (min-width: ${device.large}) {
             font-size: ${typeScale.header1};
         }
 
@@ -39,6 +44,9 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         font-size: ${typeScaleSmall.header2};
         @media screen and (min-width: ${device.medium}) {
+            font-size: ${typeScaleMedium.header2};
+        }
+        @media screen and (min-width: ${device.large}) {
             font-size: ${typeScale.header2};
         }
     }
@@ -46,6 +54,9 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         font-size: ${typeScaleSmall.header3};
         @media screen and (min-width: ${device.medium}) {
+            font-size: ${typeScaleMedium.header3};
+        }
+        @media screen and (min-width: ${device.large}) {
             font-size: ${typeScale.header3};
         }
     }

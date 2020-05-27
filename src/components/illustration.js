@@ -9,6 +9,10 @@ const StyledSvg = styled.svg`
   width: 100%;
   padding-bottom: ${margins.m3};
   @media screen and (min-width: ${device.medium}) {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+  @media screen and (min-width: ${device.large}) {
     grid-column: span 4;
     grid-row: span 3;
   }

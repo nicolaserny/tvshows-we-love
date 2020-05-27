@@ -15,7 +15,7 @@ const Wrapper = styled.main`
   display: grid;
   width: 80vw;
   max-width: 1500px;
-  @media screen and (min-height: 950px) {
+  @media screen and (min-height: 800px) and (max-height: 1500px) {
     height: calc(100vh - 2 * ${margins.m7});
   }
   margin: ${margins.m7} auto;
@@ -26,6 +26,10 @@ const Wrapper = styled.main`
   align-content: space-around;
   row-gap: 10px;
   @media screen and (min-width: ${device.medium}) {
+    grid-template-columns: repeat(6, minmax(min-content, 100px));
+    grid-template-rows: auto repeat(6, auto);
+  }
+  @media screen and (min-width: ${device.large}) {
     grid-template-columns: repeat(7, minmax(min-content, 100px));
     grid-template-rows: auto repeat(5, auto);
   }
@@ -44,7 +48,7 @@ const EmptyDiv = styled.div`
   }
 `;
 
-const posterIndexed = [1, 5, 6, 8, 10, 11, 12, 14, 16, 17];
+const posterIndexed = [1, 3, 5, 6, 8, 9, 10, 11, 12, 14, 16, 18];
 
 const IndexPage = () => {
   const popularShows = usePopularShows();
