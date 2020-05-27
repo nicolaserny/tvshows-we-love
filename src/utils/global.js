@@ -32,6 +32,9 @@ export const GlobalStyle = createGlobalStyle`
     h1 {
         margin: 0;
         font-size: ${typeScaleSmall.header1};
+        @media screen and (min-width: ${device.small}) {
+            font-size: ${typeScaleSmall.header2};
+        }
         @media screen and (min-width: ${device.medium}) {
             font-size: ${typeScaleMedium.header1};
         }

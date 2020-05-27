@@ -1,4 +1,5 @@
 export const device = {
-  medium: "600px",
+  small: "700px",
+  medium: "800px",
   large: "1100px",
 };

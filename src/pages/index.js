@@ -15,7 +15,7 @@ const Wrapper = styled.main`
   display: grid;
   width: 80vw;
   max-width: 1500px;
-  @media screen and (min-height: 800px) and (max-height: 1500px) {
+  @media screen and (min-height: 850px) and (max-height: 1500px) {
     height: calc(100vh - 2 * ${margins.m7});
   }
   margin: ${margins.m7} auto;
@@ -25,6 +25,10 @@ const Wrapper = styled.main`
   justify-content: space-around;
   align-content: space-around;
   row-gap: 10px;
+  @media screen and (min-width: ${device.small}) {
+    grid-template-columns: repeat(5, minmax(min-content, 100px));
+    grid-template-rows: auto repeat(5, auto);
+  }
   @media screen and (min-width: ${device.medium}) {
     grid-template-columns: repeat(6, minmax(min-content, 100px));
     grid-template-rows: auto repeat(6, auto);

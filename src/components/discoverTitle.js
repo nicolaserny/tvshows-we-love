@@ -7,6 +7,11 @@ const DiscoverBlock = styled.div`
   grid-row: 3;
   align-self: center;
   margin-bottom: ${margins.m2};
+  @media screen and (min-width: ${device.small}) {
+    margin-bottom: 0;
+    grid-column: 4 / span 2;
+    grid-row: 3;
+  }
   @media screen and (min-width: ${device.medium}) {
     margin-bottom: 0;
     grid-column: 4 / span 3;
