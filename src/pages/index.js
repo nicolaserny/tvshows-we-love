@@ -32,15 +32,15 @@ const Wrapper = styled.main`
   align-content: space-around;
   row-gap: 10px;
   @media screen and (min-width: ${device.small}) {
-    grid-template-columns: repeat(5, minmax(min-content, 100px));
+    grid-template-columns: repeat(5, minmax(min-content, 90px));
     grid-template-rows: auto repeat(5, auto);
   }
   @media screen and (min-width: ${device.medium}) {
-    grid-template-columns: repeat(6, minmax(min-content, 100px));
+    grid-template-columns: repeat(6, minmax(min-content, 90px));
     grid-template-rows: auto repeat(6, auto);
   }
   @media screen and (min-width: ${device.large}) {
-    grid-template-columns: repeat(7, minmax(min-content, 100px));
+    grid-template-columns: repeat(7, minmax(min-content, 90px));
     grid-template-rows: auto repeat(5, auto);
   }
 `;

@@ -42,7 +42,7 @@ export const query = graphql`
 `;
 
 const Wrapper = styled.div`
-  max-width: 80vw;
+  max-width: 95vw;
   margin: 0 auto;
   display: grid;
   grid-gap: 5px;
