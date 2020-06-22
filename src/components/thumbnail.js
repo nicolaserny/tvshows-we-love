@@ -19,7 +19,6 @@ const StyledImage = styled(Image)`
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  object-fit: cover;
   * {
     margin-top: 0;
   }
@@ -27,7 +26,12 @@ const StyledImage = styled(Image)`
 
 const Thumbnail = ({ show }) => (
   <StyledLink to={`/tvshow/${show.tvshowId}`}>
-    <StyledImage fluid={show.poster.fluid} alt={show.name} />
+    <StyledImage
+      fluid={show.poster.fluid}
+      objectFit="cover"
+      objectPosition="50% 50%"
+      alt={show.name}
+    />
   </StyledLink>
 );
 

@@ -17,7 +17,7 @@ export const usePopularShows = () => {
           tvshowId: miscPopularTvsId
           poster_path {
             childImageSharp {
-              fluid(maxWidth: 500, maxHeight: 750) {
+              fluid(maxWidth: 90, quality: 80) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
