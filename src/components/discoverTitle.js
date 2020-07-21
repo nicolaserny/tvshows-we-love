@@ -24,7 +24,7 @@ const DiscoverBlock = styled.div`
 const StyledDiscoverH1 = styled.h1`
   font-family: ${(props) => props.theme.secondaryFont};
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   color: ${(props) =>
     props.theme[`discoverTitle${props.accent ? "Accent" : "Default"}Color`]};
 `;

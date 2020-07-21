@@ -5,7 +5,7 @@ import { margins } from "../utils";
 const StyledH3 = styled.h3`
   color: ${(props) => props.theme.primaryColor};
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
 `;
 
 const StyledSvgIcon = styled.svg`

@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, defaultTheme } from "../utils";
+import "typeface-lora";
+import "typeface-montserrat";
 
 const Layout = ({ children }) => {
   return (

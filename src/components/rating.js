@@ -4,7 +4,7 @@ import { margins } from "../utils";
 
 const StyledText = styled.span`
   color: ${(props) => props.theme[`ratingColor${props.opinion}`]};
-  font-weight: 900;
+  font-weight: bold;
   margin: 0;
 `;
 
