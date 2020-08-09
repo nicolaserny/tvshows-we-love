@@ -57,13 +57,14 @@ const posterIndexed = [1, 3, 5, 6, 8, 9, 10, 11, 12, 14, 16, 18];
 const IndexPage = () => {
   const popularShows = usePopularShows();
   const shows = [...popularShows];
-  const posters = [...Array(20).keys()].map((el, i) =>
-    posterIndexed.includes(i) && shows.length > 0 ? (
-      <Thumbnail key={`poster-${el}`} show={shows.shift()} />
-    ) : (
-      <EmptyDiv key={`poster-${el}`} />
-    ),
-  );
+  const posters = [...Array(20).keys()].map((el, i) => {
+    if (posterIndexed.includes(i) && shows.length > 0) {
+      const show = shows.shift();
+      return <Thumbnail key={`poster-${show.tvshowId}`} show={show} />;
+    } else {
+      return <EmptyDiv key={`poster-${el}`} />;
+    }
+  });
   return (
     <Layout>
       <SEO title="Home" />
