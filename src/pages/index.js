@@ -60,7 +60,7 @@ const IndexPage = () => {
   const posters = [...Array(20).keys()].map((el, i) => {
     if (posterIndexed.includes(i) && shows.length > 0) {
       const show = shows.shift();
-      return <Thumbnail key={`poster-${show.tvshowId}`} show={show} />;
+      return <Thumbnail key={`poster-${show.tvshowId}-${el}`} show={show} />;
     } else {
       return <EmptyDiv key={`poster-${el}`} />;
     }
