@@ -7,8 +7,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={defaultTheme}>
-        {children}
         <GlobalStyle />
+        {children}
       </ThemeProvider>
     </>
   );

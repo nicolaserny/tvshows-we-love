@@ -11,7 +11,8 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
         font-weight: 400;
         font-display: fallback;
-        src: url("/fonts/montserrat-v14-latin-regular.woff2") format("woff2"),
+        src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url("/fonts/montserrat-v14-latin-regular.woff2") format("woff2"),
           url("/fonts/montserrat-v14-latin-regular.woff") format("woff");
     }
     @font-face {
@@ -19,7 +20,8 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-weight: 600;
     font-display: fallback;
-    src: url("/fonts/montserrat-v14-latin-600.woff2") format("woff2"),
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+        url("/fonts/montserrat-v14-latin-600.woff2") format("woff2"),
         url("/fonts/montserrat-v14-latin-600.woff") format("woff");
     }
     @font-face {
@@ -27,7 +29,8 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-weight: 700;
     font-display: fallback;
-    src: url("/fonts/montserrat-v14-latin-700.woff2") format("woff2"),
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+        url("/fonts/montserrat-v14-latin-700.woff2") format("woff2"),
         url("/fonts/montserrat-v14-latin-700.woff") format("woff");
     }
     @font-face {
