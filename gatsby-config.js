@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `TV Shows we 💜`,
-    description: `Popular tv shows`,
+    description: `Popular tv shows (updated weekly)`,
+    siteUrl: "https://tvshows-welove.fr/",
     author: `Nicolas Erny`,
   },
   plugins: [
@@ -53,5 +54,8 @@ module.exports = {
         reqPerTenSeconds: 30,
       },
     },
+    "gatsby-plugin-sitemap",
+    // Enable HTTP/2 push for critical assets.
+    "gatsby-plugin-netlify",
   ],
 };
