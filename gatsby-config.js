@@ -55,6 +55,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-offline",
     // Enable HTTP/2 push for critical assets.
     "gatsby-plugin-netlify",
   ],
