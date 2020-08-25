@@ -70,14 +70,14 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <link
-        rel="prefetch"
+        rel="preload"
         as="font"
         href="/fonts/lora-v16-latin-700.woff2"
         type="font/woff2"
         crossorigin="anonymous"
       ></link>
       <link
-        rel="prefetch"
+        rel="preload"
         as="font"
         href="/fonts/montserrat-v14-latin-600.woff2"
         type="font/woff2"
