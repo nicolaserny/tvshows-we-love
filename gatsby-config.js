@@ -5,9 +5,10 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `TV Shows we 💜`,
-    description: `Popular tv shows (updated weekly)`,
+    description: `Discover popular tv shows (updated weekly) with info and trailers`
     siteUrl: "https://tvshows-welove.fr/",
     author: `Nicolas Erny`,
+    twitterUsername: `@nicolaserny`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,6 +17,12 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://tvshows-welove.fr/`,
       },
     },
     `gatsby-transformer-sharp`,

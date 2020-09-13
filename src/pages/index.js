@@ -67,7 +67,7 @@ const IndexPage = () => {
   });
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Discover popular tv shows" />
       <Wrapper>
         <Header>
           <AppTitle />

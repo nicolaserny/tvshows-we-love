@@ -25,14 +25,20 @@ const StyledDiscoverH1 = styled.h1`
   font-family: ${(props) => props.theme.secondaryFont};
   font-style: normal;
   font-weight: 700;
-  color: ${(props) =>
-    props.theme[`discoverTitle${props.accent ? "Accent" : "Default"}Color`]};
+  color: ${(props) => props.theme.discoverTitleDefaultColor};
+`;
+
+const StyledAccentSpan = styled.span`
+  color: ${(props) => props.theme.discoverTitleAccentColor};
 `;
 
 const DiscoverTitle = () => (
   <DiscoverBlock>
-    <StyledDiscoverH1>Discover</StyledDiscoverH1>
-    <StyledDiscoverH1 accent={true}>Popular TV Shows</StyledDiscoverH1>
+    <StyledDiscoverH1>
+    Discover
+    <br/>
+    <StyledAccentSpan>Popular TV Shows</StyledAccentSpan>
+    </StyledDiscoverH1>
   </DiscoverBlock>
 );
 
