@@ -35,9 +35,8 @@ const StyledAccentSpan = styled.span`
 const DiscoverTitle = () => (
   <DiscoverBlock>
     <StyledDiscoverH1>
-    Discover
-    <br/>
-    <StyledAccentSpan>Popular TV Shows</StyledAccentSpan>
+      Discover <br />
+      <StyledAccentSpan>Popular TV Shows</StyledAccentSpan>
     </StyledDiscoverH1>
   </DiscoverBlock>
 );
