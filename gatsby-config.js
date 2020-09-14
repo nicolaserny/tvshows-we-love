@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `TV Shows we 💜`,
-    description: `Discover popular tv shows (updated weekly) with info and trailers`,
+    description: `You can discover the latest popular tv shows here (updated weekly). We include info, ratings and trailers`,
     siteUrl: "https://tvshows-welove.fr/",
     author: `Nicolas Erny`,
     twitterUsername: `@nicolaserny`,

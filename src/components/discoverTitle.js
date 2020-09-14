@@ -28,15 +28,17 @@ const StyledDiscoverH1 = styled.h1`
   color: ${(props) => props.theme.discoverTitleDefaultColor};
 `;
 
-const StyledAccentSpan = styled.span`
+const StyledAccent = styled.strong`
   color: ${(props) => props.theme.discoverTitleAccentColor};
+  font-style: normal;
+  font-weight: 700;
 `;
 
 const DiscoverTitle = () => (
   <DiscoverBlock>
     <StyledDiscoverH1>
       Discover <br />
-      <StyledAccentSpan>Popular TV Shows</StyledAccentSpan>
+      <StyledAccent>Popular TV Shows</StyledAccent>
     </StyledDiscoverH1>
   </DiscoverBlock>
 );

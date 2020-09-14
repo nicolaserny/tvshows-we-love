@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://tvshows-welove.fr/sitemap.xml
