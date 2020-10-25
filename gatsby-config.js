@@ -66,7 +66,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-offline",
+    "gatsby-plugin-remove-serviceworker",
     // Enable HTTP/2 push for critical assets.
     "gatsby-plugin-netlify",
   ],
