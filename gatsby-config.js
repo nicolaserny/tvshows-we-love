@@ -4,11 +4,12 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `TV Shows we 💜`,
+    title: `TV Shows we love`,
     description: `You can discover the latest popular tv shows here (updated weekly). We include info, ratings and trailers`,
     siteUrl: "https://tvshows-welove.fr/",
     author: `Nicolas Erny`,
     twitterUsername: `@nicolaserny`,
+    ogimage: "/ogimage.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, ogimage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -20,13 +20,19 @@ function SEO({ description, lang, meta, title }) {
             description
             author
             twitterUsername
+            ogimage
+            siteUrl
           }
         }
       }
     `,
   );
 
+  const siteUrl = site.siteMetadata.siteUrl;
   const metaDescription = description || site.siteMetadata.description;
+  const metaOgimage = ogimage
+    ? ogimage.childImageSharp.fluid.src
+    : site.siteMetadata.ogimage;
 
   return (
     <Helmet
@@ -49,12 +55,28 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          property: `og:image`,
+          content: `${siteUrl}${metaOgimage}`,
+        },
+        {
+          property: `og:image:secure_url`,
+          content: `${siteUrl}${metaOgimage}`,
+        },
+        {
+          property: `image`,
+          content: `${siteUrl}${metaOgimage}`,
+        },
+        {
+          property: `og:site_name`,
+          content: site.siteMetadata.title,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -63,6 +85,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:title`,
           content: title,
+        },
+        {
+          property: `twitter:image`,
+          content: `${siteUrl}${metaOgimage}`,
         },
         {
           name: `twitter:description`,

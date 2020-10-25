@@ -68,7 +68,7 @@ const TvshowDetailsTemplate = ({ data: { popular, tvshowExtensions } }) => {
   return (
     <Layout>
       <Wrapper>
-        <SEO title={tvshow.name} />
+        <SEO title={tvshow.name} ogimage={tvshow.backdrop_path} />
         <BackHeader />
         <TvshowHero photo={tvshow.backdrop_path.childImageSharp} />
         <TvshowBlock
