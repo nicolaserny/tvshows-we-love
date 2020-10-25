@@ -65,7 +65,19 @@ module.exports = {
         reqPerTenSeconds: 30,
       },
     },
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map((edge) => {
+            return {
+              url: site.siteMetadata.siteUrl + edge.node.path,
+              changefreq: `weekly`,
+              priority: 0.7,
+            };
+          }),
+      },
+    },
     "gatsby-plugin-remove-serviceworker",
     // Enable HTTP/2 push for critical assets.
     "gatsby-plugin-netlify",
