@@ -110,6 +110,10 @@ function SEO({ description, lang, meta, title, ogimage }) {
         type="font/woff2"
         crossorigin="anonymous"
       ></link>
+      <meta
+        name="google-site-verification"
+        content="3yPm5zhVIZdU89gKl1zmEXjFCj8RMunxnMvFkeXggY8"
+      />
     </Helmet>
   );
 }
