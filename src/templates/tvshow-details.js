@@ -65,10 +65,20 @@ const Wrapper = styled.div`
 const TvshowDetailsTemplate = ({ data: { popular, tvshowExtensions } }) => {
   const tvshow = popular.nodes[0];
   const tvshowExt = tvshowExtensions.nodes[0];
+  const metaDescription =
+    tvshow.overview.length <= 150
+      ? tvshow.overview
+      : `${tvshow.overview.substring(0, 148)}...`;
   return (
     <Layout>
       <Wrapper>
-        <SEO metadata={{ title: tvshow.name, ogimage: tvshow.backdrop_path }} />
+        <SEO
+          metadata={{
+            title: tvshow.name,
+            ogimage: tvshow.backdrop_path,
+            description: metaDescription,
+          }}
+        />
         <BackHeader />
         <TvshowHero photo={tvshow.backdrop_path.childImageSharp} />
         <TvshowBlock
