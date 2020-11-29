@@ -7,10 +7,10 @@ const StyledSpan = styled.span`
   margin: 0;
   font-size: ${typeScaleSmall.header3};
   @media screen and (min-width: ${device.medium}) {
-      font-size: ${typeScaleMedium.header3};
+    font-size: ${typeScaleMedium.header3};
   }
   @media screen and (min-width: ${device.large}) {
-      font-size: ${typeScale.header3};
+    font-size: ${typeScale.header3};
   }
   color: ${(props) => props.theme.primaryColor};
   font-style: normal;

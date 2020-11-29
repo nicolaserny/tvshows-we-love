@@ -9,7 +9,6 @@ The purpose of this project is to practice [Gatsby](https://www.gatsbyjs.org/), 
 
 The website displays TV Shows details by using a TMDb datasource. It is updated weekly.
 
-
 ## Start developing
 
 Configure env variables by creating a _.env.development_ file (use the template file as example).
