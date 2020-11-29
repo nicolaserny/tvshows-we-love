@@ -84,7 +84,7 @@ exports.createPages = async ({
     });
 
     actions.createPage({
-      path: `/tvshow/${tvshow.miscPopularTvsId}`,
+      path: `/tvshow/${tvshow.miscPopularTvsId}/`,
       component: require.resolve("./src/templates/tvshow-details.js"),
       context: {
         tvshowId: tvshow.miscPopularTvsId,

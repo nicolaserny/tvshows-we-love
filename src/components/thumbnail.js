@@ -25,7 +25,7 @@ const StyledImage = styled(Image)`
 `;
 
 const Thumbnail = ({ show }) => (
-  <StyledLink to={`/tvshow/${show.tvshowId}`}>
+  <StyledLink to={`/tvshow/${show.tvshowId}/`}>
     <StyledImage
       fluid={show.poster.fluid}
       objectFit="cover"
