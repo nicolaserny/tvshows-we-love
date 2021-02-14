@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `TV Shows we love`,
     description: `You can discover the latest popular tv shows here. We include info, ratings and trailers. Data are updated weekly from TMDB`,
-    siteUrl: "https://tvshows-welove.fr/",
+    siteUrl: "https://www.tvshows-welove.fr/",
     author: `Nicolas Erny`,
     twitterUsername: `@nicolaserny`,
     ogimage: "/ogimage.png",
@@ -23,7 +23,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://tvshows-welove.fr/`,
+        siteUrl: `https://www.tvshows-welove.fr/`,
       },
     },
     `gatsby-transformer-sharp`,

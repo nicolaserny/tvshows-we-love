@@ -3,7 +3,7 @@
 
 # TV Shows we love
 
-This is the website for [tvshows-welove.fr](https://tvshows-welove.fr/).
+This is the website for [tvshows-welove.fr](https://www.tvshows-welove.fr/).
 
 The purpose of this project is to practice [Gatsby](https://www.gatsbyjs.org/), [Sketch](https://www.sketch.com/) and responsive design.
 
