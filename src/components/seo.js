@@ -77,6 +77,14 @@ function SEO({ metadata, lang }) {
         type="font/woff2"
         crossorigin="anonymous"
       ></link>
+      {process.env.NODE_ENV === "production" && (
+        <script
+          async
+          defer
+          data-domain="tvshows-welove.fr"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
+      )}
       <meta
         name="google-site-verification"
         content="3yPm5zhVIZdU89gKl1zmEXjFCj8RMunxnMvFkeXggY8"
