@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import Image from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 const StyledLink = styled(Link)`
@@ -15,7 +15,7 @@ const StyledLink = styled(Link)`
     z-index: 10;
   }
 `;
-const StyledImage = styled(Image)`
+const StyledImage = styled(GatsbyImage)`
   width: 100%;
   height: 100%;
   border-radius: 8px;
@@ -27,7 +27,7 @@ const StyledImage = styled(Image)`
 const Thumbnail = ({ show }) => (
   <StyledLink to={`/tvshow/${show.tvshowId}/`}>
     <StyledImage
-      fluid={show.poster.fluid}
+      image={show.poster.gatsbyImageData}
       objectFit="cover"
       objectPosition="50% 50%"
       alt={show.name}

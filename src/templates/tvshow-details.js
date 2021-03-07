@@ -21,9 +21,12 @@ export const query = graphql`
         tvshowId: miscPopularTvsId
         backdrop_path {
           childImageSharp {
-            fluid(maxWidth: 900, quality: 80) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(
+              width: 900
+              quality: 80
+              layout: CONSTRAINED
+              placeholder: BLURRED
+            )
           }
         }
       }

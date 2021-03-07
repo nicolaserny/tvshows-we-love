@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 export const usePopularShows = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       popular: allTmdbMiscPopularTvs(
         limit: 12
         filter: {
@@ -17,9 +17,12 @@ export const usePopularShows = () => {
           tvshowId: miscPopularTvsId
           poster_path {
             childImageSharp {
-              fluid(maxWidth: 90, quality: 80) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+              gatsbyImageData(
+                width: 90
+                quality: 80
+                layout: CONSTRAINED
+                placeholder: BLURRED
+              )
             }
           }
         }

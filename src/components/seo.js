@@ -35,7 +35,7 @@ function SEO({ metadata, lang }) {
   const siteUrl = site.siteMetadata.siteUrl;
   const description = metadata?.description || defaults.description;
   const ogimage = metadata?.ogimage
-    ? metadata.ogimage.childImageSharp.fluid.src
+    ? metadata.ogimage.childImageSharp.gatsbyImageData.src
     : defaults.ogimage;
 
   return (

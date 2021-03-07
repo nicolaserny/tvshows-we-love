@@ -26,6 +26,7 @@ module.exports = {
         siteUrl: `https://www.tvshows-welove.fr/`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
