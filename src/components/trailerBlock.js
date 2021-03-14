@@ -26,7 +26,7 @@ const StyledTrailer = styled.iframe`
 const StyledTrailerContainer = styled.div`
   margin-top: ${margins.m3};
   height: 0;
-  padding-top: 56.25%;
+  padding-top: 56%;
   width: 100%;
   position: relative;
 `;
