@@ -4,13 +4,13 @@ import { graphql } from "gatsby";
 
 import { device } from "../utils";
 import Layout from "../components/layout";
-import { SEO } from "../components";
+import { Seo } from "../components";
 import BackHeader from "../components/backHeader";
 import TvshowHero from "../components/tvshowHero";
 import TvshowBlock from "../components/tvshowBlock";
 
 export const query = graphql`
-  query($tvshowId: Int) {
+  query ($tvshowId: Int) {
     popular: allTmdbMiscPopularTvs(
       filter: { miscPopularTvsId: { eq: $tvshowId } }
     ) {
@@ -75,7 +75,7 @@ const TvshowDetailsTemplate = ({ data: { popular, tvshowExtensions } }) => {
   return (
     <Layout>
       <Wrapper>
-        <SEO
+        <Seo
           metadata={{
             title: tvshow.name,
             ogimage: tvshow.backdrop_path,

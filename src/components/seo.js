@@ -1,5 +1,5 @@
 /**
- * SEO component that queries for data with
+ * Seo component that queries for data with
  *  Gatsby's useStaticQuery React hook
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
@@ -9,8 +9,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+import { getSrc } from "gatsby-plugin-image";
 
-function SEO({ metadata, lang }) {
+function Seo({ metadata, lang }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -35,7 +36,7 @@ function SEO({ metadata, lang }) {
   const siteUrl = site.siteMetadata.siteUrl;
   const description = metadata?.description || defaults.description;
   const ogimage = metadata?.ogimage
-    ? metadata.ogimage.childImageSharp.gatsbyImageData.src
+    ? getSrc(metadata.ogimage)
     : defaults.ogimage;
 
   return (
@@ -93,13 +94,13 @@ function SEO({ metadata, lang }) {
   );
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   lang: `en`,
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
   lang: PropTypes.string,
   metadata: PropTypes.object,
 };
 
-export default SEO;
+export default Seo;

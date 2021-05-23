@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import {
-  SEO,
+  Seo,
   DiscoverTitle,
   Illustration,
   Thumbnail,
@@ -67,7 +67,7 @@ const IndexPage = () => {
   });
   return (
     <Layout>
-      <SEO metadata={{ title: "Discover popular tv shows" }} />
+      <Seo metadata={{ title: "Discover popular tv shows" }} />
       <Wrapper>
         <Header>
           <AppTitle />
