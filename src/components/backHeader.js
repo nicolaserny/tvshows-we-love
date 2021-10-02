@@ -12,7 +12,8 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   outline: none;
   cursor: pointer;
-  &:hover {
+  &:hover,
+  &:focus {
     svg {
       transform: scale(1.1);
     }
