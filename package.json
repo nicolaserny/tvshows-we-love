@@ -24,14 +24,14 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.3.1"
+    "styled-components": "^5.3.3"
   },
   "resolutions": {
     "graphql": "^15.4.0"
   },
   "devDependencies": {
     "node-fetch": "^2.6.1",
-    "prettier": "^2.4.1"
+    "prettier": "^2.5.1"
   },
   "keywords": [
     "gatsby"
