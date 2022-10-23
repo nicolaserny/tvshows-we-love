@@ -6,6 +6,9 @@ const getDataFromMovieDbAsync = async (tvshowId, slug) => {
       process.env.API_KEY
     }&language=en-US`,
   );
+  if (!response.ok) {
+    return undefined;
+  }
   const data = await response.json();
   return data;
 };
@@ -63,9 +66,12 @@ exports.createPages = async ({
       tvshow.miscPopularTvsId,
       "/videos",
     );
-    let trailer = videos.results.find((video) => video.type === "Trailer");
-    if (!trailer) {
-      trailer = videos.results.find((video) => video.type === "Teaser");
+    let trailer = undefined;
+    if (videos) {
+      trailer = videos.results.find((video) => video.type === "Trailer");
+      if (!trailer) {
+        trailer = videos.results.find((video) => video.type === "Teaser");
+      }
     }
     actions.createNode({
       id: createNodeId(`extension-${tvshow.miscPopularTvsId}`),
